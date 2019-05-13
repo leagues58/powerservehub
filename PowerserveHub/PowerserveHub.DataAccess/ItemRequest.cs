@@ -22,6 +22,16 @@ namespace PowerserveHub.DataAccess
 
         public DateTime? Deleted { get; private set; }
 
+        public static ItemRequest GetById(int id)
+        {
+            using (var connection = new SqlConnection(DatabaseConnection.ConnectionString))
+            {
+                var parameters = new { id };
+
+                return connection.QueryFirstOrDefault<ItemRequest>("ItemRequest_GetById", parameters, commandType: CommandType.StoredProcedure);
+            }
+        }
+
         public void Save()
         {
             if (Id == 0)

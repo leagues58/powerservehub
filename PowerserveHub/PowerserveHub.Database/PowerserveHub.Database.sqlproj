@@ -56,14 +56,14 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
-    <Folder Include="Tables" />
-    <Folder Include="StoredProcedures" />
+    <Folder Include="ItemRequest" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Tables\ItemRequest.sql" />
-    <Build Include="StoredProcedures\ItemRequest_Insert.sql" />
-    <Build Include="StoredProcedures\ItemRequest_Update.sql" />
-    <Build Include="StoredProcedures\ItemRequest_Delete.sql" />
+    <Build Include="ItemRequest\ItemRequest.sql" />
+    <Build Include="ItemRequest\ItemRequest_Delete.sql" />
+    <Build Include="ItemRequest\ItemRequest_GetById.sql" />
+    <Build Include="ItemRequest\ItemRequest_Insert.sql" />
+    <Build Include="ItemRequest\ItemRequest_Update.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="LocalDb.scmp" />
